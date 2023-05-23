@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.9.0'
+    testImplementation group: 'com.microsoft.playwright', name: 'playwright', version: '1.33.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testImplementation 'io.github.sedinqa:state-tester:0.0.6'
+    testImplementation 'io.github.sedinqa:state-tester-selenium:0.0.3'
+    testImplementation 'io.github.sedinqa:state-tester-playwright:0.0.2'
+}
+
+test {
+    useJUnitPlatform()
+}
